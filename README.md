@@ -120,6 +120,7 @@ int main()
 * 任何任务都会在callback之后被自动内存回收。如果创建的任务不想运行，则需要通过dismiss方法释放。
 * 任务中的数据，例如网络请求的resp，也会随着任务被回收。此时用户可通过``std::move()``把需要的数据移走。
 * SeriesWork和ParallelWork是两种框架对象，同样在callback之后被回收。
+  * 如果某个series属于parallel的某个分支，则将在其所在parallel的callback之后再回收。
 * 项目中不使用``std::shared_ptr``来管理内存。
 
 # 使用中有疑问？
