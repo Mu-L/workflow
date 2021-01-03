@@ -35,7 +35,7 @@ int main()
 * To implement **client/server on user-defined protocol** and build your own **RPC system**.
   * [srpc](https://github.com/sogou/srpc) is based on it and it is an independent open source project, which supports srpc, brpc and thrift protocols.
 * To build **asynchronous workflow**; support common **series** and **parallel** structures, and also support any **DAG** structures.
-* As a **parallel programming tool**. In addition to **networking tasks**, Sogou C++ Workflow also includes **the scheduling of computing tasks**. All types of tasks can be put into **the same** flow.
+* As a **parallel computing tool**. In addition to **networking tasks**, Sogou C++ Workflow also includes **the scheduling of computing tasks**. All types of tasks can be put into **the same** flow.
 * As a **asynchronous file IO tool** in `Linux` system, with high performance exceeding any system call. Disk file IO is also a task.
 * To realize any **high-performance** and **high-concurrency** back-end service with a very complex relationship between computing and networking.
 * To build a **service mesh** system.
@@ -128,6 +128,7 @@ Memory reclamation mechanism
 * Every task will be automatically reclaimed after the callback. If a task is created but a user does not want to run it, the user needs to release it through the dismiss method.
 * Any data in the task, such as the response of the network request, will also be recycled with the task. At this time, the user can use `std::move()` to move the required data.
 * SeriesWork and ParallelWork are two kinds of framework objects, which are also recycled after their callback.
+  * When a series is a branch of a parallel, it will be recycled after the callback of the parallel that it belongs to.
 * This project doesn’t use `std::shared_ptr` to manage memory.
 
 #### More design documents
