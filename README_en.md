@@ -38,7 +38,7 @@ int main()
 * As a **parallel computing tool**. In addition to **networking tasks**, Sogou C++ Workflow also includes **the scheduling of computing tasks**. All types of tasks can be put into **the same** flow.
 * As a **asynchronous file IO tool** in `Linux` system, with high performance exceeding any system call. Disk file IO is also a task.
 * To realize any **high-performance** and **high-concurrency** back-end service with a very complex relationship between computing and networking.
-* To build a **service mesh** system.
+* To build a **micro service** system.
   * This project has built-in **service governance** and **load balancing** features.
 
 #### Compiling and running environment
