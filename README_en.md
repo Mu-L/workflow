@@ -140,4 +140,5 @@ To be continued...
 
 * **Xie Han** - *[xiehan@sogou-inc.com](mailto:xiehan@sogou-inc.com)*
 * **Wu Jiaxu** - *[wujiaxu@sogou-inc.com](mailto:wujiaxu@sogou-inc.com)*
+* **Wang Zhulei** - *[wangzhulei@sogou-inc.com](mailto:wangzhulei@sogou-inc.com)* - Kafka Protocol Implementation
 * **Li Yingxin** - *[liyingxin@sogou-inc.com](mailto:liyingxin@sogou-inc.com)*
